@@ -35,6 +35,9 @@ $(OBJECT): $(SRC_FILES)
 $(EXAMPLE): $(EXAMPLE_FILES) $(LIBRARY)
 	$(CC) $(CFLAGS) -o $(EXAMPLE) $(EXAMPLE_FILES) -L$(ARCHIVE_DIR) -llogger
 
+run: $(EXAMPLE)
+	./$(EXAMPLE)
+
 clean:
 	rm -f $(OBJ_DIR)/*.o $(ARCHIVE_DIR)/*.a $(BIN_DIR)/*
 
